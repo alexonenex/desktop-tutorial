@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>赵浩成的作业4</title>
+		<style type="text/css">
+			body{
+				position:absolute;  
+				left:48%;  
+				top:25%;  
+				margin:-100px 0 0 -150px
+			}
+			.ten{
+				background-color: bisque;
+				border-color: red
+			}
+			.11{
+				color: red;
+			}
+			table tr th input:first-child{
+				background-color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" method="get" name="form01">
+			<table class="ten" border="1">
+				<tr class="11" id="01"  ><th class="11" colspan="2" align="center">信&nbsp; 息&nbsp; 统&nbsp; 计&nbsp; 表</th></tr>
+				<tr >
+					<td id="01">姓名:</td>
+					<td><input class="02" type="text" name="userText"></td>
+				</tr>
+				<tr >
+					<td id="01">年龄:</td>
+					<td><input class="02" type="password" name="passwd"></td>
+				</tr>
+				<tr >
+					<td id="01">性别：</td>
+					<td align="center">
+						<input  type="radio" name="sex" value="1">男     <input type="radio" name="sex" value="0">女
+					</td>
+				</tr>
+				<tr >
+					<td id="01">爱好:</td>
+					<td>
+						<input type="checkbox" name="hobby" value="1">旅游<br />
+						<input type="checkbox" name="hobby" value="2">登山<br />
+						<input type="checkbox" name="hobby" value="3">健身<br />
+						<input type="checkbox" name="hobby" value="2">上网<br />
+						<input type="checkbox" name="hobby" value="3">游泳<br />
+					</td>
+				</tr>
+			
+				<tr>
+					<td>学历：</td>
+					<td>
+						<select id="xueli">
+							<option>专科</option>
+							<option>本科</option>
+							<option>硕士</option>
+							<option>博士</option>
+						</select>
+					</td>
+			
+				<tr>
+					<td id="01">简介:</td>
+					<td >
+						<textarea  class="02" name="comment" rows="5" cols="30">自我介绍：</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<th>
+						<input id="03" type="submit" value="提交">
+						<input type="reset" value="重置">
+					</th>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
