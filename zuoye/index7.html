@@ -4,14 +4,22 @@
 		<meta charset="utf-8">
 		<title>赵浩成的作业7</title>
 		<script type="text/javascript">
+			alert("欢迎进入")
 			function messages(){
-				alert("你写了什么？")
+				 // alert("你写了什么？");
+				swal("你写了什么？", {
+				   		buttons: false,
+				        timer: 2000,
+				    });
+			}
+			function messages1(){
+				alert("欢迎点击")
 			}
 		</script>
 	</head>
 	<img src="img/Trxt.png"/>
 	<br />
-	<input onchange="messages()" />
+	<input type="text" onclick="messages1()" onchange="messages()" />
 	<body>
 	</body>
 </html>
