@@ -3,15 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>赵浩成的作业7</title>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script type="text/javascript">
+			alert("欢迎进入")
 			function messages(){
-				alert("你写了什么？")
+				swal("你写了什么？", {
+				   	buttons: false,
+				        timer: 2000,
+				    });
+			}
+			function messages1(){
+				alert("欢迎点击")
 			}
 		</script>
 	</head>
+	<body>
 	<img src="img/Trxt.png"/>
 	<br />
-	<input onchange="messages()" />
-	<body>
+	<input type="text" onclick="messages1()" onchange="messages()" />
 	</body>
 </html>
