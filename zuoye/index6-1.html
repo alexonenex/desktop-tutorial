@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>赵浩成的作业6-1</title>
+		<style type="text/css">
+		.aa
+		{
+			width:100px;
+			height:100px;
+			background:red;
+			position:relative;
+			animation:myfirst 5s;
+			-webkit-animation:myfirst 5s; /* Safari and Chrome */
+		} 
+		
+		@keyframes myfirst
+		{
+			0%   {background:red; left:0px; top:0px;}
+			25%  {background:yellow; left:200px; top:0px;}
+			50%  {background:green; left:200px; top:200px;}
+			75%  {background:purple; left:0px; top:200px;}
+			100% {background:red; left:0px; top:0px;}
+		}
+		
+		@-webkit-keyframes myfirst /* Safari and Chrome */
+		{
+			0%   {background:red; left:0px; top:0px;}
+			25%  {background:yellow; left:200px; top:0px;}
+			50%  {background:green; left:200px; top:200px;}
+			75%  {background:purple; left:0px; top:200px;}
+			100% {background:red; left:0px; top:0px;}
+		}
+		
+		.bb
+		{
+			width:100px;
+			height:50px;
+			background:red;
+			transition:width 2s;
+			-webkit-transition:width 2s; /* Safari */
+		}
+		
+		.bb:hover
+		{
+			width:300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="bb" style="text-align: center; background-color: blue;">Transition动画</div>
+		<div class="bb" style="text-align: center;">Transition动画</div>
+	</body>
+</html>
