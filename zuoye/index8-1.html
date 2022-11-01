@@ -2,28 +2,91 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>赵浩成的作业8-注册</title>
+		<title>赵浩成的作业8-注册和作业9-1-对注册页面进行验证</title>
+		<style type="text/css">
+			
+		</style>
 		<script type="text/javascript">
 			function open_win1() {
 				window.open("./index8-2.html");
 			}
+			function register(){
+				if(document.getElementById("UserName").value!=""){
+					if(document.getElementById("text1").value==""||document.getElementById("text2").value==""){
+						alert("密码不能为空")
+					}else{
+						if(document.getElementById("text1").value!=document.getElementById("text2").value){
+							alert("两次密码不一致");
+						}
+						else{
+							if(document.getElementById("text1").value.length<6){
+								alert("密码长度最少6位")
+							}
+							else{
+								alert("完成")
+							}
+						}
+					}
+				}else{
+					alert("用户名不能为空")
+				}
+			}
+			function t1(){
+				if(document.getElementById("text1").value.length<6){
+					document.getElementById("text1t1").innerText="密码长度最少6位"
+				}else if(document.getElementById("text1").value!=document.getElementById("text2").value){
+					document.getElementById("text1t2").innerText="两次密码不一致";
+					document.getElementById("text1t1").innerText=""
+				}else{
+					document.getElementById("text2t2").innerText="";
+					document.getElementById("text1t2").innerText="";
+					document.getElementById("text1t1").innerText="";
+					document.getElementById("text2t1").innerText=""
+				}
+				
+			}
+			
+			function t2(){
+				if(document.getElementById("text1").value!=document.getElementById("text2").value){
+					 document.getElementById("text2t1").innerText="两次密码不一致"
+				}else if(document.getElementById("text2").value.length<6){
+					document.getElementById("text2t2").innerText="密码长度最少6位"
+				}
+				else{
+					document.getElementById("text2t2").innerText="";
+					document.getElementById("text1t2").innerText="";
+					document.getElementById("text2t1").innerText="";
+					document.getElementById("text1t1").innerText=""
+				}
+				
+			}
 		</script>
 	</head>
 	<body>
+		<h1 style="text-align: center;">请使用IE打开</h1>
 		<form>
 		<table>
 			<tr>
 				<td>用户名:</td>
-				<td><input type="text" name="userName"></td>
+				<td><input type="text" id="UserName" name="userName"></td>
 			</tr>
 			<tr>
 				<td>密码：</td>
-				<td><input type="text" name="text"></td>
+				<td><input type="text" onchange="t1()" id="text1" name="text1"></td>
+				<td id="text1t" style="color: red;"><label id="text1t1"></label></td>
+				<td id="text1t1" style="color: red;"><label id="text1t2"></label></td>
+			</tr>
+			
+			<tr>
+				<td>再次输入密码：</td>
+				<td><input type="text" onchange="t2()" id="text2" name="text2"></td>
+				<td id="text2t" style="color: red;"><label id="text2t1"></label></td>
+				<td id="text2t1" style="color: red;"><label id="text2t2"></label></td>
 			</tr>
 			<tr>
 				<th></th>
 				<th>
-					<input type="submit" value="注册">
+					<input type="submit" onclick="register()" value="注册">
 					<input type="reset" value="重置">
 				</th>
 			</tr>
