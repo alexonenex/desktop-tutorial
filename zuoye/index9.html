@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>zhaohaocheng的作业</title>
+		<script>
+			function dian(){
+				document.getElementById("UserName2").value=document.getElementById("UserName1").value
+				if(document.getElementById("UserName2").value==document.getElementById("UserName1").value){
+					document.getElementById("text1").value="复制成功"
+				}else{
+					document.getElementById("text1").value="复制失败"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+			<table>
+				<tr>
+					<td><input type="text" id="UserName1" name="userName1"/></td>
+					<td><button onclick="dian()">复制</button></td>
+					<td><input type="text" id="UserName2" name="userName2"/></td>
+				</tr>
+				<tr>
+					<td><input id="text1" style="border: 0;" readonly/></td>
+				</tr>
+			</table>
+		
+	</body>
+</html>

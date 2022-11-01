@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>zhaohaocheng的作业</title>
+		<script>
+			function un(){
+				if(document.getElementById("UN").value!=""){
+					document.getElementById("text1").value=""
+				}else{
+					document.getElementById("text1").value="X";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<table border="1">
+		<tr>
+			<td>姓名:</td>
+			<td><input id="UN" onchange="un()" type="text" name="userName"></td>
+			<td><input type="texta" name="PANDUAN" id="text1" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			
+		</tr>
+		<tr>
+			<td>年龄:</td>
+			<td><input type="text" id="ln" onchange="ln()" name="years"></td>
+			<td><input type="texta" name="PANDUAN" id="text2" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function ln(){
+					if(document.getElementById("ln").value!=""){
+						document.getElementById("text2").value=""
+					}else{
+						document.getElementById("text2").value="X";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td  align="center">
+				<input id="xb" onclick="xb()"  type="radio" name="sex" value="1">男     <input onclick="xb()" id="xb" type="radio" name="sex" value="0">女
+			</td>
+			<td><input type="texta" name="PANDUAN" id="text3" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function xb(){
+					var a=0;
+					if(a!=0){
+						document.getElementById("text3").value="X"
+					}else{
+						document.getElementById("text3").value="";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>血型：</td>
+			<td align="center">
+				<input onclick="xx()"  type="radio" name="blood_type" value="1">A     <input onclick="xx()" type="radio" name="blood_type" value="0">B     <input onclick="xx()" type="radio" name="blood_type" value="0">AB     <input onclick="xx()" type="radio" name="blood_type" value="0">O
+			</td>
+			<td><input type="texta" name="PANDUAN" id="text4" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function xx(){
+					var a=0;
+					if(a!=0){
+						document.getElementById("text4").value="X"
+					}else{
+						document.getElementById("text4").value="";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>性格:</td>
+			<td>
+				<input onclick="xg()" type="checkbox" name="hobby" value="1">热情大方&nbsp
+				<input onclick="xg()" type="checkbox" name="hobby" value="2">温柔体贴&nbsp
+				<input onclick="xg()" type="checkbox" name="hobby" value="3">多情善感&nbsp
+			</td>
+			<td><input type="texta" name="PANDUAN" id="text5" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function xg(){
+					var a=0;
+					if(a!=0){
+						document.getElementById("text5").value="X"
+					}else{
+						document.getElementById("text5").value="";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>文件:</td>
+			<td>
+				<input onmouseout="wj()"  id="wenjian" type="file" multiple accept="docx/*">
+			</td>
+			<td><input type="texta" name="PANDUAN" id="text6" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function wj(){
+					if(wenjian.value!=""){
+						// console.log("!="+wenjian.value);
+						document.getElementById("text6").value="";
+					}else{
+						// console.log("=="+wenjian.value);
+						document.getElementById("text6").value="X";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>自我介绍:</td>
+			<td>
+				<textarea onchange="zwjs()" id="zwjs" name="comment" rows="5" cols="30"></textarea>
+			</td>
+			<td><input type="texta" name="PANDUAN" id="text7" style="border: 0;width: 9px;color: red;" value="X" /></td>
+			<script>
+				function zwjs(){
+					
+					if(document.getElementById("zwjs").value==""){
+						document.getElementById("text7").value="X"
+					}else{
+						document.getElementById("text7").value="";
+					}
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>城市:</td>
+			<td>
+				<select name="degree">
+					<!-- <option value="">--请选择--</option> -->
+					<option value="1">成都市</option>
+					<option value="2">北京市</option>
+					<option value="3">天津市</option>
+					<option value="4">重庆市</option>
+					<option value="4">其他</option>
+				</select>
+			</td>
+			<td><input name="PANDUAN" id="text8" style="border: 0;width: 9px;color: red;" value="" /></td>
+		</tr>
+		<tr>
+			<th></th>
+			<th>
+				<input onclick="tj()" type="submit" value="提交">
+				<input type="reset" value="重置">
+			</th>
+		</tr>
+		<script>
+			function tj(){
+				if(document.getElementById("text1").value!=""||document.getElementById("text2").value!=""||document.getElementById("text3").value!=""||document.getElementById("text4").value!=""||document.getElementById("text5").value!=""||document.getElementById("text6").value!=""||document.getElementById("text7").value!=""){
+					alert("错误")
+				}
+				else{
+					alert("完成");
+					location.reload()
+				}
+			}
+		</script>
+		</table>
+		
+	</body>
+</html>
